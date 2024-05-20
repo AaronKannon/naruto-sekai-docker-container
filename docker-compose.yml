@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  naruto-sekai:
+    platform: linux/amd64
+    container_name: "naruto-sekai"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    image: "naruto-sekai"
+    entrypoint: [
+      'DreamDaemon', 'naruto way of the shinobi.dmb', '3000'
+    ]
